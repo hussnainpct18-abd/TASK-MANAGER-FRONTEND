@@ -1,4 +1,4 @@
-
+const API = import.meta.env.VITE_API_URL;
 export async function useAuth(data) {
     try {
         const formData = new FormData();
@@ -9,7 +9,7 @@ export async function useAuth(data) {
         formData.append("contact", data.contact);
         formData.append("file", data.file);
 
-        const response = await fetch('http://localhost:3000/api/auth/register', {
+        const response = await fetch(`${API}/api/auth/register`, {
             method: 'POST',
             body: formData,
             // headers: {
@@ -37,7 +37,7 @@ export async function useAuth(data) {
 export async function loginAuth(data) {
 
     try {
-        let response = await fetch('http://localhost:3000/api/auth/login', {
+        let response = await fetch(`${API}/api/auth/login`, {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -62,7 +62,7 @@ export async function loginAuth(data) {
 export async function logOut() {
 
     try {
-        const response = await fetch('http://localhost:3000/api/auth/logout', {
+        const response = await fetch(`${API}/api/auth/logout`, {
             method: "GET",
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`

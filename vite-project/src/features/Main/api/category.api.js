@@ -1,9 +1,10 @@
+const API = import.meta.env.VITE_API_URL;
 
 export async function getFavTasks(){
     try{
         const token=localStorage.getItem('token');
 
-        const response=await fetch('http://localhost:3000/api/category/getFavourite',{
+        const response=await fetch(`${API}/api/category/getFavourite`,{
             method:"GET",
             headers:{
                 "Authorization":`Bearer ${token}`
@@ -22,7 +23,7 @@ export async function getFavTasks(){
 export async function getWorkTasks(){
     try{
         const token=localStorage.getItem('token');
-        const response=await fetch('http://localhost:3000/api/category/getWork',{
+        const response=await fetch(`${API}/category/getWork`,{
             method:"GET",
             headers:{  
                 "Authorization":`Bearer ${token}`
@@ -43,7 +44,7 @@ export async function getWorkTasks(){
 export async function getPersonalTasks(){
     try{
         const token=localStorage.getItem('token');
-        const response=await fetch('http://localhost:3000/api/category/getPersonal',{
+        const response=await fetch(`${API}/api/category/getPersonal`,{
             method:"GET",
             headers:{  
                 "Authorization":`Bearer ${token}`
@@ -62,7 +63,7 @@ export async function getPersonalTasks(){
 export async function getLearningTasks(){
     try{
         const token=localStorage.getItem('token');
-        const response=await fetch('http://localhost:3000/api/category/getLearning',{
+        const response=await fetch(`${API}/api/category/getLearning`,{
             method:"GET",
             headers:{  
                 "Authorization":`Bearer ${token}`
@@ -83,7 +84,7 @@ export async function addFav(id) {
         const token = localStorage.getItem('token');
 
         const response = await fetch(
-            `http://localhost:3000/api/category/addFav/${id}`, 
+            `${API}/api/category/addFav/${id}`, 
             {
                 method: "PUT",
                 headers: {
