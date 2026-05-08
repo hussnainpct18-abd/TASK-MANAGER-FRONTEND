@@ -3,7 +3,7 @@ import { Nav } from 'react-bootstrap'
 import Login from '../../auth/pages/Login'
 import Register from '../../auth/pages/Register'
 import Welcome from '../../Welcome/welcome'
-import './style.css'
+import '../components/style.css'
 
 const Board = ({setuser}) => {
     return (
