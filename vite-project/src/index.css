@@ -1,0 +1,52 @@
+body{
+  font-family: 'Times New Roman', Times, serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* LIGHT MODE */
+body.light {
+    --bg-color: #ffffff;
+    --text-color: #111827;
+    --card-color: #f3f4f6;
+    --border-color: #d1d5db;
+}
+
+/* DARK MODE */
+body.dark {
+    --bg-color: #111827;
+    --text-color: #f9fafb;
+    --card-color: #1f2937;
+    --border-color: #374151;
+}
+
+/* GLOBAL STYLING */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    transition: all 0.3s ease;
+}
+
+/* Example Card */
+.custom-card {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+
+    transition: all 0.3s ease;
+}
+
+body.dark .modal-content {
+    background-color: #1f2937;
+    color: white;
+}
+
+body.dark .form-control {
+    background-color: #374151;
+    color: white;
+    border-color: #4b5563;
+}
+
+body.dark .form-control::placeholder {
+    color: #d1d5db;
+}

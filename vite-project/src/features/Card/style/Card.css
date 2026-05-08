@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+.task-card {
+  font-family: 'DM Sans', sans-serif;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.09);
+  /* border-left: 4px solid #E8622A; */
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  background: #fff;
+}
+
+.task-card:hover {
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.13);
+  transform: translateY(-2px);
+}
+
+.task-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  letter-spacing: -0.01em;
+}
+
+.meta-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.meta-text {
+  font-size: 0.82rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 0.88rem;
+  color: #4b5563;
+  line-height: 1.55;
+}
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #fff7f3;
+  /* color: #E8622A; */
+  border: 1px solid #fdddd0;
+}
+
+.badge-status {
+  background: #f0fdf4;
+  /* color: #16a34a; */
+  border-color: #bbf7d0;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+}
+
+.icon-btn:hover {
+  background: #f3f4f6;
+  transform: scale(1.1);
+}
+
+.icon-btn.active-star {
+  color: yellow;
+}
+
+.icon-btn.delete-btn:hover {
+  background: rgb(222, 155, 155);
+  color: #ef4444;
+}
+
+.icon-btn.detail-btn:hover {
+  background: #eff6ff;
+  color: #3b82f6;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #f3f4f6;
+  margin: 12px 0;
+}
+
+.footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+  .task-title {
+    font-size: 1rem;
+  }
+
+  .meta-text {
+    font-size: 0.77rem;
+  }
+
+  .badge-pill {
+    font-size: 0.73rem;
+    padding: 3px 8px;
+  }
+}
