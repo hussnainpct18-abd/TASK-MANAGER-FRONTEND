@@ -9,7 +9,7 @@ export async function useAuth(data) {
         formData.append("contact", data.contact);
         formData.append("file", data.file);
 
-        const response = await fetch(`${API}/api/auth/register`, {
+        const response = await fetch(`${API.replace(/\/$/, '')}/api/auth/register`, {
             method: 'POST',
             body: formData,
             // headers: {
