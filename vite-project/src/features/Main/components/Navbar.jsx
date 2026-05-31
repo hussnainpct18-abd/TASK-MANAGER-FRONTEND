@@ -14,6 +14,7 @@ import { logOut } from '../../auth/api/auth.api'
 import NoTasks from '../../Skeleton/Not found'
 import './Navbar.css'
 
+const API = import.meta.env.VITE_API_URL;
 
 const Navbarmain = () => {
     const [skeleton, setskeleton] = useState(3)
@@ -191,7 +192,7 @@ const Navbarmain = () => {
                                     title={
                                         <img
                                             src={file
-                                                ? `http://localhost:3000/uploads/${file}`
+                                                ? `${API}/uploads/${file}`
                                                 : "/Assests/default.png"}
                                             alt="Profile"
                                             width="40"
