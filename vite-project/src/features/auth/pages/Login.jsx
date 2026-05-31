@@ -65,7 +65,7 @@ const Login = () => {
 
                         <div className='w-100 my-2 py-3'>
                             <label className='mb-1'> Email:</label>
-                            <input type="email" placeholder='Enter your Email' name='email' id='email' required className='w-100 p-1' required
+                            <input type="email" placeholder='Enter your Email' name='email' id='email' required className='w-100 p-1'
                                 onChange={
                                     (e) => {
                                         setdata((prev) => ({
@@ -80,7 +80,7 @@ const Login = () => {
 
                         <div className='mb-3'>
                             <label className='mb-1'>Password :</label>
-                            <input type="password" placeholder='Enter your Password' name='password' id='password' required className='w-100 p-1' required
+                            <input type="password" placeholder='Enter your Password' name='password' id='password' required className='w-100 p-1' 
                                 onChange={
                                     (e) => {
                                         setdata((prev) => ({
