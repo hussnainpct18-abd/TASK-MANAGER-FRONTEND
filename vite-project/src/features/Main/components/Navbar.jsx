@@ -221,7 +221,7 @@ const Navbarmain = () => {
 
             </Container>
 
-            <div className="dashboard-content ">
+            <div className="d-flex justify-content-center align-items-center text-center">
 
                 {loading ? (
 
