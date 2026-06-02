@@ -24,7 +24,7 @@ const App = () => {
 
       <Routes>
 
-        <Route element={<Board />} path='/' index />
+        <Route element={<Board />} path='/'  />
 
         <Route
           path='/dashboard'
