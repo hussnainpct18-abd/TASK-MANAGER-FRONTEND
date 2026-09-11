@@ -3,7 +3,7 @@ export async function useAuth(data) {
     try {
         const formData = new FormData();
 
-        formData.append("username", data.name);   // match backend
+        formData.append("username", data.username);
         formData.append("email", data.email);
         formData.append("password", data.password);
         formData.append("contact", data.contact);

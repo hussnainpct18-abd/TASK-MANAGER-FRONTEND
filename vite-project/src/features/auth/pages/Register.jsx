@@ -79,7 +79,7 @@ const Register = () => {
                             <input type="text" placeholder='Full name' name='username' id='username' required className='w-100 p-1' onChange={(e) =>
                                 setdata((prev) => ({
                                     ...prev,
-                                    name: e.target.value
+                                    username: e.target.value
                                 }))
                             } />
                         </div>
