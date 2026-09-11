@@ -65,18 +65,19 @@ export async function getTaskById(id){
 export async function updateTaskById(id,updatedTask){
     try{
         const token=localStorage.getItem('token');
-        const response=fetch(`${API}/api/task/updateTask/${id}`,{
+        const response = await fetch(`${API}/api/task/updateTask/${id}`,{
             method:"PUT",
             body:JSON.stringify(updatedTask),
             headers:{
                 "Content-Type":"application/json",
                 "Authorization":`Bearer ${token}`
             }
-        })
+        });
         if(response.ok){
             return await response.json();
         }else{
-            return false
+            const result = await response.json().catch(() => ({}));
+            return { error: result.message || 'Failed to update task' };
         }   
     }catch(e){
         throw e;
